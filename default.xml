@@ -2,6 +2,7 @@
 <manifest>
   <default sync-j="4" revision="thud"/>
 
+  <remote name="tm"    fetch="git://github.com/sr105-tm"/>
   <remote name="digi"  fetch="git://github.com/digi-embedded"/>
   <remote name="fsl"   fetch="git://github.com/Freescale"/>
   <remote name="qt5"   fetch="git://github.com/meta-qt5"/>
@@ -9,9 +10,9 @@
   <remote name="oe"    fetch="git://git.openembedded.org"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org"/>
 
-  <project name="meta-digi.git" path="sources/meta-digi" remote="digi" revision="thud">
-    <copyfile src="sdk/mkproject.sh" dest="mkproject.sh"/>
-  </project>
+  <project name="meta-tm-bsp.git"       path="sources/meta-tm-bsp"       remote="tm"    revision="thud"/>
+  <project name="meta-tm-sw.git"        path="sources/meta-tm-sw"        remote="tm"    revision="thud"/>
+  <project name="meta-digi.git"         path="sources/meta-digi"         remote="digi"  revision="thud"/>
   <project name="meta-freescale.git"    path="sources/meta-freescale"    remote="yocto" revision="thud"/>
   <project name="meta-fsl-demos.git"    path="sources/meta-fsl-demos"    remote="fsl"   revision="thud"/>
   <project name="meta-openembedded.git" path="sources/meta-openembedded" remote="oe"    revision="thud"/>
