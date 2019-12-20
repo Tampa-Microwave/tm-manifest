@@ -10,13 +10,13 @@
   <remote name="oe"    fetch="git://git.openembedded.org"/>
   <remote name="yocto" fetch="git://git.yoctoproject.org"/>
 
-  <project name="meta-tm-bsp.git"       path="sources/meta-tm-bsp"       remote="tm"    revision="thud"/>
-  <project name="meta-tm-sw.git"        path="sources/meta-tm-sw"        remote="tm"    revision="thud"/>
-  <project name="meta-digi.git"         path="sources/meta-digi"         remote="digi"  revision="thud"/>
-  <project name="meta-freescale.git"    path="sources/meta-freescale"    remote="yocto" revision="thud"/>
-  <project name="meta-fsl-demos.git"    path="sources/meta-fsl-demos"    remote="fsl"   revision="thud"/>
-  <project name="meta-openembedded.git" path="sources/meta-openembedded" remote="oe"    revision="thud"/>
-  <project name="meta-qt5.git"          path="sources/meta-qt5"          remote="qt5"   revision="thud"/>
-  <project name="meta-swupdate.git"     path="sources/meta-swupdate"     remote="swu"   revision="thud"/>
-  <project name="poky.git"              path="sources/poky"              remote="yocto" revision="thud"/>
+  <project name="meta-tm-bsp.git"       path="sources/meta-tm-bsp"       remote="tm"    revision="thud" sync-c="true"/>
+  <project name="meta-tm-sw.git"        path="sources/meta-tm-sw"        remote="tm"    revision="thud" sync-c="true"/>
+  <project name="meta-digi.git"         path="sources/meta-digi"         remote="digi"  revision="thud" sync-c="true"/>
+  <project name="meta-freescale.git"    path="sources/meta-freescale"    remote="yocto" revision="thud" sync-c="true"/>
+  <project name="meta-fsl-demos.git"    path="sources/meta-fsl-demos"    remote="fsl"   revision="thud" sync-c="true"/>
+  <project name="meta-openembedded.git" path="sources/meta-openembedded" remote="oe"    revision="thud" sync-c="true"/>
+  <project name="meta-qt5.git"          path="sources/meta-qt5"          remote="qt5"   revision="thud" sync-c="true"/>
+  <project name="meta-swupdate.git"     path="sources/meta-swupdate"     remote="swu"   revision="thud" sync-c="true"/>
+  <project name="poky.git"              path="sources/poky"              remote="yocto" revision="thud" sync-c="true"/>
 </manifest>
