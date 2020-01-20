@@ -11,7 +11,9 @@
   <remote name="yocto" fetch="git://git.yoctoproject.org"/>
 
   <project name="meta-tm-bsp.git"       path="sources/meta-tm-bsp"       remote="tm"    revision="thud" sync-c="true"/>
-  <project name="meta-tm-sw.git"        path="sources/meta-tm-sw"        remote="tm"    revision="thud" sync-c="true"/>
+  <project name="meta-tm-sw.git"        path="sources/meta-tm-sw"        remote="tm"    revision="thud" sync-c="true">
+      <linkfile src="conf/README.md" dest="README.md"/>
+  </project>
   <project name="meta-digi.git"         path="sources/meta-digi"         remote="digi"  revision="thud" sync-c="true"/>
   <project name="meta-freescale.git"    path="sources/meta-freescale"    remote="yocto" revision="thud" sync-c="true"/>
   <project name="meta-fsl-demos.git"    path="sources/meta-fsl-demos"    remote="fsl"   revision="thud" sync-c="true"/>
