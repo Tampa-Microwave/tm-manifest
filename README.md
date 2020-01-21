@@ -4,6 +4,14 @@ This repository contains the manifest files for Tampa Microwaves' Yocto distribu
 
 ## Installation
 
+### QUICK
+
+If you're on a new machine, the following command will install system dependencies, download the sources, and setup an initial build directory. You'll need your `sudo` password and any ssh keys required for accessing Tampa Microwave private GitHub repositories.
+
+```shell
+bash <(curl -fsSL https://raw.githubusercontent.com/sr105-tm/tm-manifest/thud/bootstrap.sh)
+```
+
 ### Google repo tool
 
 Download Google's repo tool to a directory within your path and add execution
@@ -11,10 +19,10 @@ permissions. Repo is a tool for downloading many different source repositories
 and arranging them locally. All of the details are defined in an XML manifest
 file found in its own repo, this one.
 
-    ```shell
-    sudo curl -o /usr/local/bin/repo http://commondatastorage.googleapis.com/git-repo-downloads/repo
-    sudo chmod a+x /usr/local/bin/repo
-    ```
+```shell
+sudo curl -o /usr/local/bin/repo http://commondatastorage.googleapis.com/git-repo-downloads/repo
+sudo chmod a+x /usr/local/bin/repo
+```
 
 ### Download the manifest sources
 
@@ -24,23 +32,23 @@ upstream sources to save space. Choose a single, semi-permanent place to
 download the sources. You'll do your builds in (optionally) separate build
 directories.
 
-    ```shell
-    mkdir -p /path/to/tm-2.6
-    cd /path/to/tm-2.6
-    repo init -u https://github.com/sr105-tm/tm-manifest -b thud
-    repo sync
-    ```
+```shell
+mkdir -p /path/to/tm-2.6
+cd /path/to/tm-2.6
+repo init -u https://github.com/sr105-tm/tm-manifest -b thud
+repo sync
+```
 
 ### Create a Build Directory
 
 Now, create an initial build directory as detailed in the README file in the
 root level of the downloaded sources. It is reproduced here:
 
-  ```shell
-  mkdir -p /path/to/build
-  cd /path/to/build
-  . /path/to/tm-2.6/sources/meta-tm-sw/conf/tm-env
-  ```
+```shell
+mkdir -p /path/to/build
+cd /path/to/build
+. /path/to/tm-2.6/sources/meta-tm-sw/conf/tm-env
+```
 
 This will create a symbolic link to the `tm-env` file and initialize a build
 configuration in your new build directory.
@@ -49,12 +57,12 @@ configuration in your new build directory.
 
 You will need to source the `tm-env` file anytime you open a new terminal.
 
-    ```shell
-    . /path/to/build/tm-env
-    # You are now inside /path/to/build and the environment is initialized for
-    # building.
-    bitbake tm-image
-    ```
+```shell
+. /path/to/build/tm-env
+# You are now inside /path/to/build and the environment is initialized for
+# building.
+bitbake tm-image
+```
 
 This will take about 3 hours for the first build. Future builds will only build
 changes. If all goes well, the output is in `/path/to/build/tmp/deploy/images`.
