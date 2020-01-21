@@ -28,6 +28,18 @@ if ! which repo >/dev/null 2>&1; then
     sudo chmod a+x /usr/local/bin/repo
 fi
 
+if ! git config --global user.name >/dev/null 2>&1; then
+    read -ep "Name for git commits (e.g. Joe User): " GIT_NAME
+    git config --global user.name "${GIT_NAME}"
+fi
+if ! git config --global user.email >/dev/null 2>&1; then
+    read -ep "E-mail address for git commits (e.g. joe.user@domain.com): " GIT_EMAIL
+    git config --global user.email "${GIT_EMAIL}"
+fi
+if ! git config --global color.ui >/dev/null 2>&1; then
+    git config --global color.ui auto
+fi
+
 SOURCE_DIR=tm-2.6
 
 mkdir ${SOURCE_DIR}
