@@ -9,7 +9,7 @@ This repository contains the manifest files for Tampa Microwaves' Yocto distribu
 If you're on a new machine, the following command will install system dependencies, download the sources, and setup an initial build directory. You'll need your `sudo` password and any ssh keys required for accessing Tampa Microwave private GitHub repositories.
 
 ```shell
-bash <(curl -fsSL https://raw.githubusercontent.com/sr105-tm/tm-manifest/thud/bootstrap.sh)
+source <(curl -fsSL https://raw.githubusercontent.com/sr105-tm/tm-manifest/thud/bootstrap.sh)
 ```
 
 ### Google repo tool
