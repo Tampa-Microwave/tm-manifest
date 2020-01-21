@@ -46,7 +46,7 @@ mkdir ${SOURCE_DIR}
 pushd ${SOURCE_DIR}
 {
     repo init -u https://github.com/sr105-tm/tm-manifest.git -b thud
-    repo sync -j1 --no-repo-verify
+    repo sync
     popd
 }
 
